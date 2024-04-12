@@ -63,19 +63,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 2.5rem 2rem;
   gap: 1rem;
 }
 
 .main-img {
-  width: 120px;
+  max-width: 120px;
+  max-height: 120px;
   border-radius: 50%;
 }
 
 .main-content h2 {
   font-size: 1.5rem;
-    margin: 0.167em 0;
+  margin: 0.167em 0;
 }
 
 .subheading {
@@ -86,4 +86,27 @@ body {
 .main-content p {
   text-align: left;
   line-height: 1.35;
+}
+
+@media (min-width: 576px) {
+  #root {
+    display: flex;
+
+  }
+
+  .intro,
+  .main-content {
+    width: 50%;
+  }
+
+  .intro {
+    height: 100vh;
+  }
+
+  .main-content {
+    justify-content: center;
+    padding-top: 0;
+  }
+
+
 }
